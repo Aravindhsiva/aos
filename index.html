@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AOS animations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+<script>
+    alert("Please vote me if you like it....");
+</script>
+</head>
+<body>
+    <h1>
+        AOS-ANIMATE SCROLL ANIMATIONS
+    </h1>
+    <P>The following is posted by <span>Aravindh</span>, a front end developer from Chennai. Aravindh has tried one of those "when you scroll to here, trigger this animation" libraries. One of the things I like about it is that it leaves as much as it can to
+        CSS for creating and controlling the animation themselves. Not to mention it's proved itself by working well on a number of production sites. Have you ever seen those long web pages where different animations
+        are being applied as you scroll down? I’d like to share with you a plugin I wrote that makes it really easy to handle all kinds of animations with full CSS control and no pain. If you'd like to get right into it, the code is on GitHub. #The Problem
+        With Other Libraries In my previous company we were using WOW.js (or other similar libraries) to animate elements on scroll. For simple projects it was quite nice, but on larger sites we wanted to have more control over what’s actually happening.
+        In all of popular libraries, animations were completely handled by JavaScript by inserting inline CSS. Arghgh! Inline styles are evil. They are hard to control and override. Though, in some cases it’s ok to set them using JavaScript, it’s still
+        much cleaner to just leave them where they belong and handle all CSS related things inside CSS file. I decided to create a library that has a pure goal - detect position of elements and then add appropriate classes when they appear in viewport.
+        #Controlling Animations Entirely in CSS I wanted to split the responsibilities with my new library: Have all the logic inside the JavaScript Have all the animations in the CSS This allows you to add your own animations easily, and do things like
+        change them according to the viewport. #How AOS Works The idea behind AOS is straightforward: watch all elements and their positions based on settings you provide them. Then add/remove the class aos-animate. Of course, in practice, it’s not always
+        that easy, but the idea behind AOS is as simple as that. Every aspect of animation is handled by CSS</P>
+    <H2>
+        SEE ANIMATIONS BELOW SCROLL DOWN
+    </H2>
+    <div class="item A" data-aos="fade-up">A</div>
+    <div class="item B" data-aos="fade-down">B</div>
+    <div class="item C" data-aos="fade-right">C</div>
+    <div class="item D" data-aos="fade-left">D</div>
+
+    <div class="item E" data-aos="zoom-in">E</div>
+    <div class="item F" data-aos="zoom-out">F</div>
+
+    <div class="item G" data-aos="slide-up">G</div>
+
+    <div class="item H" data-aos="flip-up">H</div>
+    <div class="item I" data-aos="flip-down">I</div>
+    <div class="it J" data-aos="fade-left" style="color:black;">By <span>&hearts;</span><img src="https://fontmeme.com/permalink/180620/cd63ff8c9dfecefae4e19459a1f11d20.png"> <span>&hearts;</span></div>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        .item {
+            width: 100px;
+            height: 100px;
+            margin: 50px auto;
+            padding-top: 30px;
+            text-align: center;
+            font-size: 2em;
+            border:3px solid black;
+        }
+        h1{
+            color:#09aaff;
+            font-size:20px;
+        }
+        span{
+            color:red;
+        }
+        .A{
+            background-color:red;
+            color:white;
+        }
+        .B{
+            background-color:#7800FF;
+            color:white;
+        }
+        .C{
+            background-color:#00CDFF;
+            color:black;
+        }
+        .D{
+            background-color:#00FF55;
+            color:black;
+        }
+        .E{
+            background-color:#B2FF00;
+            color:black;
+        }
+        .F{
+            background-color:#E67E22;
+            color:black;
+        }
+        .G{
+            background-color:#0004FF;
+            color:white;
+        }
+        .H{
+            background-color:#FF00F7;
+            color:white;
+        }
+        .I{
+            background-color:#000;
+            color:white;
+        }
+        .it{
+            width: 300px;
+            height: 100px;
+            margin: 50px auto;
+            padding-top: 50px;
+            text-align: center;
+            font-size: 2em;
+        }
+    </style>
+
+    <script>
+        AOS.init({
+            duration: 1200,
+        })
+    </script>
+</body>
+
+</html>
